@@ -1,13 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.testimonials {
+  position: relative;
+  width: 100%; 
+}
+
+.testimonial-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.visible {
+  opacity: 1;
+  position: relative;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimonial-thumbnail {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.testimonial-quote {
+  font-size: 24px;
+}
+
+.testimonial-para {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.testimonial-author {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #999999;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-dot {
+  cursor: pointer;
+  border: none;
+  padding: 5.5px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: rgb(130, 126, 119);
+}
+
+.testimonial-dot-active {
+  background: rgb(24, 24, 21);
+}
+
+
+@media (max-width: 767px) {
+  .testimonials {
+    grid-template-columns: 15% 1fr 15%;
+  }
+}
+
